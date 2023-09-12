@@ -3,7 +3,7 @@
 
 IFACE=eth0
 PORT=6343
-LOG=$IFACE-sflow.log
+LOG=/PATH/$IFACE-sflow.log
 
 startCollect() {
     echo –n "Starting sFlow collect..."
