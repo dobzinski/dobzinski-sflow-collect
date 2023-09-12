@@ -1,7 +1,7 @@
 # dobzinski-sflow-collect
 Collect and archive sFlow transfer package, output JSON format.
 
-# Configure on CentOS / Rocky
+# CentOS / Rocky
 ```
 # dnf install tcpdump
 # wget https://www.rpmfind.net/linux/openmandriva/cooker/repository/x86_64/non-free/release/sflowtool-6.02-1-omv2390.x86_64.rpm
