@@ -11,7 +11,7 @@ startCollect() {
 }
 
 stopCollect() {
-    PID=`/usr/bin/ps -e | /usr/bin/grep sflowtool | /usr/bin/grep -v grep | /usr/bin/awk '{print $1}'`
+    checkPID;
     if [[ -n $PID ]]
     then 
         echo "Stoping sFlow collect..."
@@ -19,6 +19,10 @@ stopCollect() {
     else
         echo "It's not running!"
     fi
+}
+
+checkPID() {
+    PID=`/usr/bin/ps -e | /usr/bin/grep sflowtool | /usr/bin/grep -v grep | /usr/bin/awk '{print $1}'`
 }
 
 case "$1" in
@@ -29,7 +33,7 @@ case "$1" in
     restart)
         stopCollect; startCollect;;
     status)
-        PID=`/usr/bin/ps -e | /usr/bin/grep sflowtool | /usr/bin/grep -v grep | /usr/bin/awk '{print $1}'`
+        checkPID;
         if [[ -n $PID ]]
         then
             echo "It's running..."
