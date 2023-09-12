@@ -1,5 +1,5 @@
 # dobzinski-sflow-collect
-Collect and archive sFlow transfer package
+Collect and archive sFlow transfer package, output JSON format.
 
 # Configure on CentOS / Rocky
 ```
